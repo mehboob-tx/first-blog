@@ -24,7 +24,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-3 fh5co_padding_menu">
-                <img src="{{  url('public/assets') }}/images/logo.png" alt="img" class="fh5co_logo_width"/>
+              <a href="{{  url('/') }}"> <img src="{{  url('public/assets') }}/images/logo.png" alt="img" class="fh5co_logo_width"/></a>
             </div>
             <div class="col-12 col-md-9 align-self-center fh5co_mediya_right">
                 <div class="text-center d-inline-block">
@@ -66,9 +66,9 @@
         <div class="row  ">
             <div class="col-12 col-md-6 py-4 Reserved"> © Copyright 2018, All rights reserved. Design by <a href="https://freehtml5.co" title="Free HTML5 Bootstrap templates">FreeHTML5.co</a>. </div>
             <div class="col-12 col-md-6 spdp_right py-4">
-                <a href="#" class="footer_last_part_menu">Home</a>
-                <a href="Contact_us.html" class="footer_last_part_menu">About</a>
-                <a href="Contact_us.html" class="footer_last_part_menu">Contact</a>
+                <a href="{{  url('/') }}" class="footer_last_part_menu">Home</a>
+                <a href="{{  url('contact') }}" class="footer_last_part_menu">About</a>
+                <a href="{{  url('contact') }}" class="footer_last_part_menu">Contact</a>
                 <a href="blog.html" class="footer_last_part_menu">Latest News</a></div>
         </div>
     </div>
