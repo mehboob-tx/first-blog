@@ -1,6 +1,6 @@
 @extends('layout.default')
 @section('title')
-<title>Home Page</title>
+<title>Bolgs</title>
 @stop
 @section('content')
 <div class="container-fluid pb-4 pt-4 paddding">
@@ -13,7 +13,7 @@
                 <div class="row pb-4">
                     <div class="col-md-5">
                         <div class="fh5co_hover_news_img">
-                            <div class="fh5co_news_img"><img src="{{  url('public/assets') }}/{{  url('public/assets') }}/images/nathan-mcbride-229637.jpg" alt=""/></div>
+                            <div class="fh5co_news_img"><img src="{{  url('public/assets') }}/images/nathan-mcbride-229637.jpg" alt=""/></div>
                             <div></div>
                         </div>
                     </div>
@@ -53,7 +53,7 @@
                     <div class="col-md-5">
                         <div class="fh5co_hover_news_img">
                             <div class="fh5co_news_img">
-                                <img src="{{  url('public/assets') }}/images/photo-1449157291145-7efd050a4d0e-578x362.jpg" alt=""/>
+                                <img src="images/photo-1449157291145-7efd050a4d0e-578x362.jpg" alt=""/>
                             </div>
                             <div></div>
                         </div>
@@ -70,7 +70,7 @@
                 <div class="row pb-4">
                     <div class="col-md-5">
                         <div class="fh5co_hover_news_img">
-                            <div class="fh5co_news_img"><img src="{{  url('public/assets') }}/images/office-768x512.jpg" alt=""/></div>
+                            <div class="fh5co_news_img"><img src="images/office-768x512.jpg" alt=""/></div>
                             <div></div>
                         </div>
                     </div>
@@ -108,7 +108,7 @@
                 </div>
                 <div class="row pb-3">
                     <div class="col-5 align-self-center">
-                        <img src="{{  url('public/assets') }}/images/download (1).jpg" alt="img" class="fh5co_most_trading"/>
+                        <img src="images/download (1).jpg" alt="img" class="fh5co_most_trading"/>
                     </div>
                     <div class="col-7 paddding">
                         <div class="most_fh5co_treding_font"> Magna aliqua ut enim ad minim veniam quis nostrud.</div>
@@ -117,7 +117,7 @@
                 </div>
                 <div class="row pb-3">
                     <div class="col-5 align-self-center">
-                        <img src="{{  url('public/assets') }}/images/allef-vinicius-108153.jpg" alt="img" class="fh5co_most_trading"/>
+                        <img src="images/allef-vinicius-108153.jpg" alt="img" class="fh5co_most_trading"/>
                     </div>
                     <div class="col-7 paddding">
                         <div class="most_fh5co_treding_font"> Enim ad minim veniam nostrud xercitation ullamco.</div>
@@ -126,7 +126,7 @@
                 </div>
                 <div class="row pb-3">
                     <div class="col-5 align-self-center">
-                        <img src="{{  url('public/assets') }}/images/download (2).jpg" alt="img" class="fh5co_most_trading"/>
+                        <img src="images/download (2).jpg" alt="img" class="fh5co_most_trading"/>
                     </div>
                     <div class="col-7 paddding">
                         <div class="most_fh5co_treding_font"> Magna aliqua ut enim ad minim veniam quis nostrud.</div>
@@ -134,7 +134,7 @@
                     </div>
                 </div>
                 <div class="row pb-3">
-                    <div class="col-5 align-self-center"><img src="{{  url('public/assets') }}/images/seth-doyle-133175.jpg" alt="img"
+                    <div class="col-5 align-self-center"><img src="images/seth-doyle-133175.jpg" alt="img"
                                                               class="fh5co_most_trading"/></div>
                     <div class="col-7 paddding">
                         <div class="most_fh5co_treding_font"> Magna aliqua ut enim ad minim veniam quis nostrud.</div>

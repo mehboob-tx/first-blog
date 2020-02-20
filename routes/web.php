@@ -14,4 +14,5 @@
 Route::get('/','HomeController@index');
 Route::get('single','HomeController@single');
 Route::get('blog','HomeController@blog');
+Route::get('contact','HomeController@contact');
 
