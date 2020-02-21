@@ -29,6 +29,10 @@ class HomeController extends Controller
     {
         return view('frontend.contact_us');
     }
+    public function admin()
+    {
+        return view('admin-layout.admin-defualt');
+    }
 
     /**
      * Show the form for creating a new resource.
