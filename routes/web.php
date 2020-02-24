@@ -18,8 +18,8 @@ Route::get('contact','HomeController@contact');
 Route::get('admin','HomeController@admin');
 Route::get('login','HomeController@login');
 
-Route::resource('sign_in','AdminController');
-
+Route::get('admin-login','LoginController@showLoginForm')->name('admin.login');
+Route::post('admin-login','Auth\LoginController@login');
 
 
 
