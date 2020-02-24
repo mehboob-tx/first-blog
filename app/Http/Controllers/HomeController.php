@@ -33,6 +33,10 @@ class HomeController extends Controller
     {
         return view('admin-layout.admin-defualt');
     }
+    public function login()
+    {
+        return view('admin-frontend.admin-login');
+    }
 
     /**
      * Show the form for creating a new resource.

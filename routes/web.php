@@ -16,5 +16,10 @@ Route::get('single','HomeController@single');
 Route::get('blog','HomeController@blog');
 Route::get('contact','HomeController@contact');
 Route::get('admin','HomeController@admin');
+Route::get('login','HomeController@login');
+
+Route::resource('sign_in','AdminController');
+
+
 
 
