@@ -49,7 +49,7 @@ class LoginController extends Controller
         $this->validateLogin($request);
 
         User::create($request->all());
-        return redirect()->route('admin-frontend.admin-index')
+        return redirect('admin')
                     ->with('success',' Successfully');
 
        
