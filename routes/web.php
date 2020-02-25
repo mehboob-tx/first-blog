@@ -21,5 +21,22 @@ Route::get('login','HomeController@login');
 Route::get('admin-login','LoginController@showLoginForm')->name('admin.login');
 Route::post('admin-login','Auth\LoginController@login');
 
+Route::get('/', function(){
+	$name = request('name')  ;
+	return $name;
+});
+Route::get('posts/{post}',function($post){
+	$my=[
+		'mypost' => 'hello',
+		'otherspost' => 'world'
+	];
+	/*if(!array_keys_exists( $post , $my)){
+		abort(404 , 'aho');
+	}*/
+	return view('post',[
+		'post'=>$my[$post]  ?? 'nothing yet.'
+	]);
+});
+
 
 

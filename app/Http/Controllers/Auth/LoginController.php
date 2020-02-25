@@ -48,10 +48,15 @@ class LoginController extends Controller
     {
         $this->validateLogin($request);
 
+        /* $request->validate([
+            'email'=> 'required',
+            'password'=>['required' , 'min:3' , 'max:15']  
+        ]);*/
+
 
         $email = $request->input('email');
          $password = $request->input('password');
-
+            // its work also when remove '=' sign , and also use firstorfail()
          $user = User::where('email', '=', $email)->first();
          if (!$user) {
             return response()->json(['success'=>false, 'message' => 'Login Fail, please check email id']);
