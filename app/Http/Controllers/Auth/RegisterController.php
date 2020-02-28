@@ -75,17 +75,35 @@ class RegisterController extends Controller
         ]);*/
 
          
-         $password = $request->input('password');
-         $re_password = $request->input('re-password');
+        $password = $request->input('password'); 
+        $re_password = $request->input('re_password');
 
+         if($password === $re_password){
+            $user= new User;
+                $user->name= $request->input('name');
+                $user->email= $request->input('email');
+                $newpassword=Hash::make($password);
 
-        if (!Hash::check($password, $re_password)) {
+                $user->password=$newpassword;
+                $user->save();
+                return redirect('login');
+         }
+
+         //$newpassword=Hash::make($password);
+        // $newconfirmpassword=Hash::make($re_password);
+
+       /* if (!Hash::check($newpassword, $re_password)) {
 
             return response()->json(['success'=>false, 'message' => 'Login Fail, pls check password']);
-         }
+         }*/
          else {
-            User::create($request->all());
+            //User::create($request->all());
+            return response()->json(['success'=>false, 'message' => 'Login Fail, pls check password']);
+
+            
          }
+
+         
 
     }
 }

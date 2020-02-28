@@ -14,7 +14,14 @@
           <img src="{{  url('public/admin_assets') }}/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block">
+
+           <!-- @if(Session::has('name'))
+            {{ Session::get('name') }}
+            @endif -->
+
+            {{ Session::get('name') }}
+          </a>
         </div>
       </div>
 
@@ -389,7 +396,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/examples/register.html" class="nav-link">
+                <a href="{{ url('register') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Register</p>
                 </a>

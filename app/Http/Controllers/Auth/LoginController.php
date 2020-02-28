@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\User;
-
+use Session;
 
 
 class LoginController extends Controller
@@ -66,6 +66,7 @@ class LoginController extends Controller
 
             // its work also when remove '=' sign , and also use firstorfail()
          $user = User::where('email', '=', $email)->first();
+
          if (!$user) {
             return response()->json(['success'=>false, 'message' => 'Login Fail, please check email id']);
          }
@@ -73,7 +74,20 @@ class LoginController extends Controller
             return response()->json(['success'=>false, 'message' => 'Login Fail, pls check password']);
          }
          // return response()->json(['success'=>true,'message'=>'success', 'data' => $user]);
+         else{
+             Session::put('email',$request->email);   //Update
+
+                Session::put('name', $user->name);
+              //  $user=Session::get('user');
+                //echo $user->name; die ;
+
+
         return redirect('admin')->with('success','Login Successfully');
+
+         }
+       
+
+       // return redirect('admin')->with('success','Login Successfully');
 
 
 

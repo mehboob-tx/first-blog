@@ -22,6 +22,8 @@ Route::get('admin-login','Auth\LoginController@showLoginForm')->name('admin.logi
 Route::post('admin-login','Auth\LoginController@login');
 
 Route::get('register','HomeController@register');
+//Route::get('validation','Auth\RegisterController@validator');
+
 Route::put('admin-register','Auth\RegisterController@create')->name('admin.register');
 
 

@@ -34,7 +34,7 @@
 
 
 
-@include('admin-layout.admin-footer')
+
 
   <!-- Main Sidebar Container -->
 @include('admin-layout.admin-sidebar')
@@ -42,6 +42,8 @@
   <!-- Content Wrapper. Contains page content -->
 @yield('content')
   <!-- /.content-wrapper -->
+
+@include('admin-layout.admin-footer')
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
