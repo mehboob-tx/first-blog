@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\URL;
 
 use Illuminate\Http\Request;
 
@@ -31,11 +32,15 @@ class HomeController extends Controller
     }
     public function admin()
     {
-        return view('admin-layout.admin-defualt');
+        return view('admin-frontend.admin-index');
     }
     public function login()
     {
         return view('admin-frontend.admin-login');
+    }
+    public function register()
+    {
+        return view('admin-frontend.admin-register');
     }
 
     /**

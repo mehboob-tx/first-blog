@@ -8,7 +8,11 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use App\User;
+
+
+
 class LoginController extends Controller
 {
     /*
@@ -46,50 +50,44 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
-        $this->validateLogin($request);
+        //$this->validateLogin($request);
 
-        /* $request->validate([
+        $request->validate([
             'email'=> 'required',
             'password'=>['required' , 'min:3' , 'max:15']  
-        ]);*/
+        ]);
 
 
-        $email = $request->input('email');
+         $email = $request->input('email');
          $password = $request->input('password');
+
+        //  $hashed = Hash::make($password);
+
+
             // its work also when remove '=' sign , and also use firstorfail()
          $user = User::where('email', '=', $email)->first();
          if (!$user) {
             return response()->json(['success'=>false, 'message' => 'Login Fail, please check email id']);
          }
-         if (\Hash::check($password, $user->password)) {
+         if (!Hash::check($password, $user->password)) {
             return response()->json(['success'=>false, 'message' => 'Login Fail, pls check password']);
          }
-            return response()->json(['success'=>true,'message'=>'success', 'data' => $user]);
+         // return response()->json(['success'=>true,'message'=>'success', 'data' => $user]);
+        return redirect('admin')->with('success','Login Successfully');
 
 
 
 
-    /*  $chk  = $request->only('email', 'password');
+      /*$chk  = $request->only('email', 'password');
 
-    if (Auth::attempt($chk)) {
-        // Authentication passed...
-        return redirect('admin');
-    }*/
-
-
+        if (Auth::attempt($chk)) {
+            // Authentication passed...
+            return redirect('admin');
+        } */
 
 
-       /*  $email = $request->input('email');
-         $password = $request->input('password');
 
-         $user = User::where('email', '=', $email)->first();
-         if (!$user) {
-            return response()->with([ 'message' => 'Login Fail, please check email id']);
-         }
-         if (!Hash::check($password, $user->password)) {
-            return response()->with([ 'message' => 'Login Fail, pls check password']);
-         }
-            return response()->with(['success'=>true,'message'=>'success', 'data' => $user])*/  
+ 
 
        /*User::create($request->all());
         $request->session()->put('email',$request->input('email'));

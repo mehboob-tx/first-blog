@@ -18,13 +18,24 @@ Route::get('contact','HomeController@contact');
 Route::get('admin','HomeController@admin');
 Route::get('login','HomeController@login');
 
-Route::get('admin-login','LoginController@showLoginForm')->name('admin.login');
+Route::get('admin-login','Auth\LoginController@showLoginForm')->name('admin.login');
 Route::post('admin-login','Auth\LoginController@login');
 
-Route::get('/', function(){
+Route::get('register','HomeController@register');
+Route::put('admin-register','Auth\RegisterController@create')->name('admin.register');
+
+
+
+
+
+
+
+
+
+/*Route::get('/', function(){
 	$name = request('name')  ;
 	return $name;
-});
+});*/
 Route::get('posts/{post}',function($post){
 	$my=[
 		'mypost' => 'hello',

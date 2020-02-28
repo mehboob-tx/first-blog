@@ -1,4 +1,4 @@
-@extends('admin-layout.admin-default')
+@extends('admin-layout.admin-defualt')
 @section('title')
 <title>Home Page</title>
 @stop
