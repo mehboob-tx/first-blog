@@ -32,6 +32,12 @@
 				<input type="text" name="employe" class="form-control" placeholder="Total Numbers of Employee ">
 			</div>
 		</div>
+		<div class="col-lg-12">
+			<div class="from-group">
+				<strong>City ID</strong>
+				<input type="text" name="cid" class="form-control" placeholder="City ID ">
+			</div>
+		</div>
 	<br>
 		<div class="col-lg-12">
 			<button type="Submit" class="btn btn-primary">Submit</button>

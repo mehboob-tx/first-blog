@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use App\Company;
+use App\City;
+
 
 
 class CompanyController extends Controller
@@ -64,7 +66,8 @@ class CompanyController extends Controller
     public function show(Request $request)
     {
         $name=$request->input('name');
-         $data['company'] = Company::where('name', '=', $name)->first();
+
+         $data['company'] = Company::where('name', '=', $name)->with(['city'])->first();
        // print_r($data['company']);die;
          if (!$data['company']) {
              die('not found');

@@ -11,6 +11,8 @@
             <td>Address</td>
             <td>phone</td>
             <td>Employe</td>
+            <td>City</td>
+            <td>Country</td>
          </tr>
           <tr>
             <!-- <td>{{ $company ?? ''->id }}</td> -->
@@ -18,6 +20,8 @@
             <td>{{ $company->address }}</td>
             <td>{{ $company->phone }}</td>
             <td>{{ $company ->employe }} </td>
+            <td>{{ $company->city->city }} </td>
+            <td>{{ $company->city->country }} </td>
          </tr>
         
       </table>
