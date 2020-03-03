@@ -26,6 +26,16 @@ Route::get('register','HomeController@register');
 
 Route::put('admin-register','Auth\RegisterController@create')->name('admin.register');
 
+Route::get('company','CompanyController@index');
+Route::get('create','CompanyController@create');
+Route::put('store','CompanyController@store');
+Route::get('search','CompanyController@search');
+Route::put('show','CompanyController@show');
+
+
+
+
+
 
 
 
